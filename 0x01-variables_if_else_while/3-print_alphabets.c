@@ -14,14 +14,14 @@ int main(void)
 
 	while (d <= 122)
 	{
-		asc = (char) dgt;
+		asc = (char) d;
 		putchar(asc);
 		d++;
 	}
 
 	while (g <= 90)
 	{
-		asc = (char) dgt;
+		asc = (char) g;
 		putchar(asc);
 		g++;
 	}
