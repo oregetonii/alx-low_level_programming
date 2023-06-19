@@ -1,10 +1,7 @@
 #include <stdio.h>
+/* headers */
 
- /**
-  * main - Entry point
-  * Return: Always 0 (Success)
-  */
-
+/*prints a string to the stdio */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
