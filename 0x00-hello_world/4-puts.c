@@ -1,8 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 
  /**
-  * This function prints unformatted
-  * string in the stdio
+  * main - Entry point
+  * Return: Always 0 (Success)
   */
 
 int main(void)
