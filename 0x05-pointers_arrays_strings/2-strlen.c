@@ -2,14 +2,16 @@
 
 /**
  * _strlen - takes a pointer to char and returns length
- * @s: pointer to string
+ * @*s: pointer to string
  * Return: 0
  */
 
 int _strlen(char *s)
 {
 	int count = 0;
+
 	char  c;
+
 	s = &c;
 
 	while (*s != '\0')
