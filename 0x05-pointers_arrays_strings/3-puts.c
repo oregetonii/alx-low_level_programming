@@ -2,16 +2,11 @@
 
 /**
  * _puts - prints a string to the stdio followed by new line
- * @*str: pointer to the address of the string
- * Return: 0
+ * @str: pointer to the address of the string
  */
 
 void _puts(char *str)
 {
-	char c;
-
-	str = &c;
-
 	while (*str != '\0')
 	{
 		_putchar(*str);
