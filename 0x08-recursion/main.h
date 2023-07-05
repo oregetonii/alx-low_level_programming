@@ -15,5 +15,12 @@ int _putchar(char c);
 
 void _puts_recursion(char *s);
 
+/**
+ * _strlen_recursion - returns the length of string
+ * @s: string
+ * Return: int length
+ */
+
+int _strlen_recursion(char *s);
 
 #endif
