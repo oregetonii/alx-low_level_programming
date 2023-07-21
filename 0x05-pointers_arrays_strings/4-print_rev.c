@@ -3,17 +3,22 @@
 /**
  * print_rev - prints a string in reverse
  * @s: the string
+ * Return: nothing
  */
 
+/**
+ * _strlen - returns the length of a string
+ * @*s: pointer to the string wose length is returned
+ * Return: int value
+ */
 int _strlen(char *s);
 
 int _strlen(char *s)
 {
-        int count = 0;
-
+	int count = 0;
         while (*s != '\0')
         {
-                count++;
+		count++;
                 s++;
         }
         return (count);
