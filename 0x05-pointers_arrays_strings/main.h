@@ -26,8 +26,8 @@ void swap_int(int *a, int *b);
 
 /**
  * _strlen - returns the length of a string
- * @*s: pointer to the string wose length is returned
- * Return: 0
+ * @s: the string whose length is returned
+ * Return: int value
  */
 
 int _strlen(char *s);
@@ -43,9 +43,18 @@ void _puts(char *str);
 /**
  * print_rev - prints a string in reverse
  * @s: the string
+ * Return: void
  */
 
 void print_rev(char *s);
+
+/**
+ * rev_string - reveres a string
+ * @s: the string
+ * Return: void
+ */
+
+void rev_string(char *s);
 
 /**
  * puts2 - prints every other character of a string to the stdio followed by new line
