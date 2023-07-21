@@ -16,7 +16,7 @@ void rev_string(char *s)
 
 	if ((cn % 2) == 0)
 	{
-		for (i = 0; i <= (cn / 2); i++)
+		for (i = 0; i <= ((cn / 2) - 1); i++)
 		{
 			temp = &s[i];
 			*temp = s[i];
