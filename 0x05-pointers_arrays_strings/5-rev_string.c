@@ -12,14 +12,30 @@ void rev_string(char *s)
 {
 	int i;
 	char *temp;
-	int cn = _strlen(s);
+	int cn = (_strlen(s) - 1);
 
 	for (i = 0; i <= cn; i++)
 	{
-		temp = &s[i];
-		*temp = s[i];
-		s[i] = s[(cn - i)];
-		s[(cn - i)] = *temp;
+		if ((cn + 1) % 2 == 0)
+		{
+			if (cn != (i + 2))
+			{
+				temp = &s[i];
+				*temp = s[i];
+				s[i] = s[(cn - i)];
+				s[(cn - i)] = *temp;
+			}
+		}
+		else
+		{
+			if (cn != (cn - 1))
+			{
+				temp = &s[i];
+				*temp = s[i];
+				s[i] = s[(cn - 1)];
+				s[(cn - 1)] = *temp;
+			}
+		}
 	}
 }
 
