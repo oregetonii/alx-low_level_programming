@@ -6,11 +6,6 @@
  * Return: nothing
  */
 
-/**
- * _strlen - returns the length of a string
- * @*s: pointer to the string wose length is returned
- * Return: int value
- */
 int _strlen(char *s);
 
 void print_rev(char *s)
@@ -28,6 +23,12 @@ void print_rev(char *s)
 	}
 	_putchar('\n');
 }
+
+/**
+ * _strlen - returns the length of a string
+ * @*s: pointer to the string wose length is returned
+ * Return: int value
+ */
 
 int _strlen(char *s)
 {
