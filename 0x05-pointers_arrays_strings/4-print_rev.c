@@ -17,9 +17,10 @@ void print_rev(char *s)
 {
 	int len;
 	char *ss;
-	len = _strlen(s);
 
+	len = _strlen(s);
 	ss = s + (len - 1);
+
 	while (ss >= s)
 	{
 		_putchar(*ss);
@@ -31,6 +32,7 @@ void print_rev(char *s)
 int _strlen(char *s)
 {
 	int count = 0;
+
 	while (*s != '\0')
 	{
 		count++;
