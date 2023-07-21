@@ -24,9 +24,9 @@ void print_rev(char *s)
 	int len;
 	char *ss;
 	len = _strlen(s);
-	ss = s + len;
+	ss = s + (len - 1);
 
-	while (ss > s)
+	while (ss >= s)
 	{
 		_putchar(*ss);
 		ss--;
