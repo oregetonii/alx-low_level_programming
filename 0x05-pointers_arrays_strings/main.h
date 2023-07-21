@@ -41,6 +41,13 @@ int _strlen(char *s);
 void _puts(char *str);
 
 /**
+ * print_rev - prints a string in reverse
+ * @s: the string
+ */
+
+void print_rev(char *s);
+
+/**
  * puts2 - prints every other character of a string to the stdio followed by new line
  * @*s: pointer to the address of the string
  * Retuor: 0
