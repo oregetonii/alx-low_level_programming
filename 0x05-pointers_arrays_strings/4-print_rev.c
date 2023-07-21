@@ -3,7 +3,7 @@
 /**
  * print_rev - prints a string in reverse
  * @s: the string
- * Return: nothing
+ * Return: void
  */
 
 int _strlen(char *s);
@@ -26,7 +26,7 @@ void print_rev(char *s)
 
 /**
  * _strlen - returns the length of a string
- * @*s: pointer to the string wose length is returned
+ * @s: the string whose length is returned
  * Return: int value
  */
 
