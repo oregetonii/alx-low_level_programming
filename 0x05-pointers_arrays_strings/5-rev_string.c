@@ -6,33 +6,34 @@
  * Return: void
  */
 
-int _strlen(char *s);
-
 void rev_string(char *s)
 {
-	int i;
-	char *temp;
+	char c;
+	char *send;
 	int cn = _strlen(s);
+	int aclen = cn - 1;
+	send = s + aclen;
 
-	if ((cn % 2) == 0)
+	if ((aclen % 2) == 0)
 	{
-		while (i <= (cn / 2))
+		while ((send - s) > 1)
 		{
-			temp = &s[i];
-			*temp = s[i];
-			s[i] = s[(cn - i)];
-			s[(cn - i)] = *temp;
-			i++;
+			c = *s;
+			*s = *send;
+			send = &c
+			send--;
+			s++;
 		}
 	}
 	else
 	{
-		for (i = 0; i <= (((cn - 1) / 2) + 1); i++)
+		while (s != send)
 		{
-			temp = &s[i];
-			*temp = s[i];
-			s[i] = s[((cn - 1) - i)];
-			s[((cn - 1) - i)] = *temp;
+			c = *s;
+			*s = *send;
+			send = &c;
+			send--;
+			s++;
 		}
 	}
 }
