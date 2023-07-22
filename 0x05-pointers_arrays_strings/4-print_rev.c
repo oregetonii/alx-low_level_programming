@@ -10,7 +10,7 @@ void print_rev(char *s)
 {
 	int count = _strlen(s);
 	char *ss;
-	ss = s + count;
+	ss = s + (count - 1);
 
 	while (s <= ss)
 	{
