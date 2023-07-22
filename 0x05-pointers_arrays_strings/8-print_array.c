@@ -14,13 +14,13 @@ void print_array(int *a, int n)
 	else
 	{
 		int count = 1;
-		
+
 		while (count < n)
-			{
-				printf("%d%c%c", *a, ',', ' ');
-				a++;
-				count++;
-			}
+		{
+			printf("%d%c%c", *a, ',', ' ');
+			a++;
+			count++;
+		}
 		if (count == n)
 			printf("%d\n", *a);
 	}
