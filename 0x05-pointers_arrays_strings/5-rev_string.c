@@ -29,7 +29,7 @@ void rev_string(char *s)
 	}
 	else
 	{
-		while (s != send)
+		while (s < send)
 		{
 			c = *s;
 			*s = *send;
