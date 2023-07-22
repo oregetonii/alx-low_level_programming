@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- *_strcpy - copies a string
- *@src: the source of the string
- *@dest: the destination of the string
- *Return: dest
- */ 
+ * _strcpy - copies a string
+ * @src: the original string
+ * @dest: the copied string
+ * Return: copied string
+ */
 
-int _strlen(char *s);
+int _strlen(char *src);
 
 char *_strcpy(char *dest, char *src)
 {
