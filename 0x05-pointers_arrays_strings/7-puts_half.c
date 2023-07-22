@@ -19,7 +19,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		for (str = str + (x - ((x - 1) /2)); *str != '\0'; str++)
+		for (str = str + (x - ((x - 1) / 2)); *str != '\0'; str++)
 			_putchar(*str);
 		_putchar('\n');
 	}
@@ -35,9 +35,9 @@ int _strlen(char *s)
 {
 	int count = 0;
 	while (*s != '\0')
-        {
+	{
 		count++;
 		s++;
-        }
-        return (count);
+	}
+	return (count);
 }
