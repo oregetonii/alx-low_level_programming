@@ -33,7 +33,7 @@ void puts_half(char *str)
 
 int _strlen(char *s)
 {
-        int count = 0;
+	int count = 0;
 	while (*s != '\0')
         {
 		count++;
