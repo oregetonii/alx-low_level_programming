@@ -18,7 +18,7 @@ void rev_string(char *s)
 		send = send;
 	else if ((aclen % 2) == 0)
 	{
-		while ((send - s) > 2)
+		while ((send - s) > 1)
 		{
 			c = *s;
 			*s = *send;
