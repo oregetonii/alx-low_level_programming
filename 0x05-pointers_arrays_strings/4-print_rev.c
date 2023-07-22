@@ -6,20 +6,17 @@
  * Return: void
  */
 
-int _strlen(char *s);
-
-void rev_string(char *s)
+void print_rev(char *s)
 {
-	int i;
-	char *temp;
-	cn = _strlen(s);
+	int count = _strlen(s);
+	char *ss;
+	ss = s + count;
 
-	for (i = 0; i = (cn - 1); i++)
+	while (s <= ss)
 	{
-		*temp = s[i];
-		s[i] = s[((cn - 1) - i)];
-		s[((cn - 1) - i)] = *temp;
+		_putchar(*ss);
 	}
+	_putchar('\n');
 }
 
 /**
