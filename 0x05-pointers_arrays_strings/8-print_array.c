@@ -10,10 +10,11 @@
 void print_array(int *a, int n)
 {
 	if (n <= 0)
-		printf("%c\n", ' ');
+		printf("\n");
 	else
 	{
 		int count = 1;
+
 		while (count < n)
 			{
 				printf("%d%c%c", *a, ',', ' ');
