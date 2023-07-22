@@ -9,14 +9,19 @@
 
 void print_array(int *a, int n)
 {
-	int count = 1;
-
-	while (count < n)
+	if (n <= 0)
+		return;
+	else
 	{
-		printf("%d%c%c", *a, ',', ' ');
-		a++;
-		count++;
+		int count = 1;
+
+		while (count < n)
+			{
+				printf("%d%c%c", *a, ',', ' ');
+				a++;
+				count++;
+			}
+		if (count == n)
+			printf("%d\n", *a);
 	}
-	if (count == n)
-		printf("%d\n", *a);
 }
