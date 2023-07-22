@@ -13,7 +13,8 @@ void print_array(int *a, int n)
 
 	while (count < n)
 	{
-		printf("%d%c%c", *a,',',' ');
+		printf("%d%c%c", *a, ',', ' ');
+		a++;
 		count++;
 	}
 	if (count == n)
