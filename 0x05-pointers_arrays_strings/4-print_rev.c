@@ -10,11 +10,12 @@ void print_rev(char *s)
 {
 	int count = _strlen(s);
 	char *ss;
-	ss = s + (count - 1);
+	ss = s + count;
 
 	while (s <= ss)
 	{
 		_putchar(*ss);
+		ss--;
 	}
 	_putchar('\n');
 }
