@@ -82,10 +82,10 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 
 /**
- *_strcpy - copies a string
- *@src: the source of the string
- *@dest: the destination of the string
- *Return: 0
+ * _strcpy - copies a string
+ * @src: the original string
+ * @dest: the copied string
+ * Return: copied string
  */
 
 char *_strcpy(char *dest, char *src);
