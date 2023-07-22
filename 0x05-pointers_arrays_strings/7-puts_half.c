@@ -5,7 +5,6 @@
  * @str: the string to print
  * Return: void
  */
-int _strlen(char *str);
 
 void puts_half(char *str)
 {
