@@ -74,9 +74,9 @@ void puts_half(char *str);
 
 /**
  * print_array - prints n elements of integer array
- * @*a: pointer to the array
+ * @a: pointer to the array
  * @n: numberof elements to print
- * Return: 0
+ * Return: void
  */
 
 void print_array(int *a, int n);
