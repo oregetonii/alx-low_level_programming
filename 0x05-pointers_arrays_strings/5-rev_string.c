@@ -12,7 +12,7 @@ void rev_string(char *s)
 	char *send;
 	int cn = _strlen(s);
 	int aclen = cn - 1;
-	send = s + cn;
+	send = s + aclen;
 
 	if (cn == 1)
 		send = send;
@@ -22,7 +22,7 @@ void rev_string(char *s)
 		{
 			c = *s;
 			*s = *send;
-			send = &c;
+			*send = c;
 			send--;
 			s++;
 		}
@@ -33,7 +33,7 @@ void rev_string(char *s)
 		{
 			c = *s;
 			*s = *send;
-			send = &c;
+			*send = c;
 			send--;
 			s++;
 		}
