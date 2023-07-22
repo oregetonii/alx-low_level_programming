@@ -12,9 +12,11 @@ void rev_string(char *s)
 	char *send;
 	int cn = _strlen(s);
 	int aclen = cn - 1;
-	send = s + aclen;
+	send = s + cn;
 
-	if ((aclen % 2) == 0)
+	if (cn == 1)
+		send = send;
+	else if ((aclen % 2) == 0)
 	{
 		while ((send - s) > 1)
 		{
