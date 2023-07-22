@@ -14,7 +14,7 @@ void print_array(int *a, int n)
 	else
 	{
 		int count = 1;
-
+		
 		while (count < n)
 			{
 				printf("%d%c%c", *a, ',', ' ');
