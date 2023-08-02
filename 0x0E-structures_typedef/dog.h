@@ -6,9 +6,6 @@
  * @name: first member
  * @age: second member
  * @owner: third member
- *
- * Description: creates new structure of type dog,
- * with three members; name, age, and owner
  */
 struct dog 
 {
