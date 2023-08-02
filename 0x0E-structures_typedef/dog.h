@@ -10,7 +10,6 @@
  * Description: creates new structure of type dog,
  * with three members; name, age, and owner
  */
-
 struct dog 
 {
 	char *name;
