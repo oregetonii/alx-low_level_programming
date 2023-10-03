@@ -34,12 +34,31 @@ void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 
 /**
- *  * str_concat - concatenates two strings
- *   * @s1 - first string
- *    * @s2 - the second string
- *     * Return: pointer to the concatenated string
- *      */
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: the second string
+ * Return: pointer to the concatenated string
+ */
 
 char *str_concat(char *s1, char *s2);
+
+/**
+ * create_array - creates an array of chars
+ * and initializes it with a specific char
+ * @size: the size of the array
+ * @c: the specified char
+ * Return: pointer to the array
+ */ 
+
+char *create_array(unsigned int size, char c);
+
+/**
+ * alloc-grid - creates a 2D array of ints
+ * @width: the array width
+ * @height: the array height
+ * Return: pointer to the array
+ */
+
+int **alloc_grid(int width, int height);
 
 #endif
