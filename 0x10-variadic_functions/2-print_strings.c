@@ -12,10 +12,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	char *p;
-
+	char *p_last;
 	va_list str_print;
-	va_start(str_print, n);
 
+	va_start(str_print, n);
 	i = 1;
 	while (i < n)
 	{
@@ -32,10 +32,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (p == NULL)
 			printf("(nil)%s", separator);
 
-		printf("%s%s", p, separator);
+		else 
+			printf("%s%s", p, separator);
 		i++;
 	}
-	printf("%s", va_arg(str_print, char*));
+	p_last = va_arg(str_print, char*);
+	if (p_last == NULL)
+		printf("(nil)");
+	else
+		printf("%s", p_last);
 	va_end(str_print);
 	printf("\n");
 }
