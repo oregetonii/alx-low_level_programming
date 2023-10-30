@@ -10,12 +10,15 @@
 int create_file(const char *filename, char *text_content)
 {
 	FILE *file;
+	size_t text_writt;
 
 	/* Otherwise create a new file */
 	file = fopen(filename, "w");
-	if (! file)
+	if (file == NULL)
 		return (-1);
 	/*Write contents to file */
-	fwrite(text_content, sizeof(char), _strlen(text_content), file);
+	text_writt = fwrite(text_content, sizeof(char), _strlen(text_content), file);
+	if ((int) text_writt != _strlen(text_content))
+		return (-1);
 	return (1);
 }
