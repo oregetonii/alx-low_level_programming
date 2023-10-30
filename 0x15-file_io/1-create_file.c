@@ -11,14 +11,8 @@ int create_file(const char *filename, char *text_content)
 {
 	FILE *file;
 
-	/* Check if the file already exists */
-	if (_file_exists(filename))
-	{
-		truncate(filename, 0);
-		return (1);
-	}
 	/* Otherwise create a new file */
-	file = fopen(filename, "r+");
+	file = fopen(filename, "w");
 	if (! file)
 		return (-1);
 	/*Write contents to file */
