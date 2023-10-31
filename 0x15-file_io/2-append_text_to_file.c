@@ -8,24 +8,21 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *file;
-	size_t text_writt;
+	int fd; 
 
-	/** Check if te file doesn't exist 
-	if (_file_exists(filename) == false)
-		return (-1);
-	file = fopen(filename, "a");*/
-	/* Check if opened success */
-	if (file == NULL)
-		return (-1);
-	while (*text_content != '\0')
+	if (! filename)
+		exit(-1);
+	fd = open(filename, O_WRONLY | O_APPEND);
+	if (fd == -1)
+		exit(-1);
+	if (text_content != NULL)
 	{
-		text_writt = fwrite(text_content, sizeof(char), sizeof(char), file);
-		text_content++;
+		while (*text_content != '\0')
+		{
+			write(fd, text_content, sizeof(char));
+			text_content++;
+		}
 	}
-	fclose(file);
-	/*if ((int) text_writt != _strlen(text_content))
-		return (-1);*/
-	return (1);
+	close(fd);
+	exit(1);
 }
-
