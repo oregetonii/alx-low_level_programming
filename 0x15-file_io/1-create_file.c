@@ -9,17 +9,39 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	FILE *file;
-	size_t text_writt;
+	int fd;
+	/*size_t text_writt;*/
 
+	if (filename == NULL)
+		return (-1);
 	/* Otherwise create a new file */
-	file = fopen(filename, "w");
-	if (file == NULL)
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (fd == -1)
 		return (-1);
 	/*Write contents to file */
-	text_writt = fwrite(text_content, sizeof(char), _strlen(text_content), file);
-	fclose(file);
-	if ((int) text_writt != _strlen(text_content))
-		return (-1);
+	if (text_content != NULL)
+	{
+		while (*text_content != '\0')
+		{
+			write(fd, text_content, sizeof(char));
+			text_content++;
+		}
+	}
+	close(fd);
+	/*if ((int) text_writt != _strlen(text_content))
+		return (-1);*/
 	return (1);
+}
+
+int main(int ac, char **av)
+{
+	int res;
+	if (ac != 3)
+	{
+		dprintf(2, "Usage: %s filename text\n", av[0]);
+		exit(1);
+	}
+	res = create_file(av[1], av[2]);
+	printf("-> %i)\n", res);
+	return (0);
 }
