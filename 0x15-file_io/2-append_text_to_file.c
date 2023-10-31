@@ -9,6 +9,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	FILE *file;
+	size_t text_writt;
 
 	/* Check if te file doesn't exist */
 	if (_file_exists(filename) == false)
@@ -17,4 +18,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	/* Check if opened success */
 	if (file == NULL)
 		return (-1);
+	text_writt = fwrite(text_content, sizeof(char), _strlen(text_content), file);
+	fclose(file);
+	if ((int) text_writt != _strlen(text_content))
+		return (-1);
+	return (1);
+}
 

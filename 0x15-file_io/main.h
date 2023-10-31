@@ -55,6 +55,14 @@ int create_file(const char *filename, char *text_content);
 
 int _strlen(char *s);
 
+/**
+ * append_text_to_file: appends text to a file
+ * @filename: name of the file
+ * @text_content: data to append to the file
+ *
+ * Return: 1 (successful), -1 (otherwise)
+ */
+int append_text_to_file(const char *filename, char *text_content);
 
 
 #endif
