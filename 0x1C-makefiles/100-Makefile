@@ -18,7 +18,7 @@ all: m.h $(OBJ)
 
 #deletes tmp files and executable
 clean:
-	$(RM) *~$(NAME)
+	$(RM) *~ $(NAME)
 
 #deletes object files
 oclean:
