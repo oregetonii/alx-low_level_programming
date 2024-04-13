@@ -8,6 +8,8 @@
  */
 void print_array(int *array, size_t l, size_t r)
 {
+	size_t i = 0;
+
 	printf("Searching in array: ");
 	for (i = l; i <= r; i++)
 	{
